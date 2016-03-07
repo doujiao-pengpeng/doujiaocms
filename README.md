@@ -1,0 +1,26 @@
+# doujiaocms
+你看下架构，基本上纯参考doracms的。
+## 组织架构
+- public(静态资源目录)
+  - js
+  - css
+  - images
+  - font
+  - upload(上传文件夹)
+- views（视图目录）
+  - manage（后台模板）
+  - web（前台模板）
+   - temp(cms的模板)
+- routes（路由目录）
+- app.js（项目入口文件）
+- settings.js（站点配置）
+## 后台管理
+- 用户组管理
+- 用户管理
+- 栏目管理
+- 文章管理
+- 模板管理
+- 广告管理
+- 用户上传文件管理
+- 数据统计
+- 站点配置
