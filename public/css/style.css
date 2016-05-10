@@ -1,0 +1,15 @@
+.navbar .container-fluid{padding:0 35px;}
+.navbar-top{border-radius: 0;border:none;background: #1A402E;}
+.navbar-top .navbar-brand{color:#eee;}
+.navbar-top .navbar-nav>.active>a, 
+.navbar-top .navbar-nav>.active>a:focus, 
+.navbar-top .navbar-nav>.active>a:hover{color:#eee;background: #38734d;}
+.navbar-top .navbar-nav>li>a:focus, 
+.navbar-top .navbar-nav>li>a:hover{color:#fff;}
+.navbar-top .navbar-nav>li>a{color:#eee;}
+
+.register{width:370px;position:absolute;left:50%;margin-left:-175px;top:150px;}
+.register h4{text-align: center;margin:0;line-height:40px;background: #1A402E;color:#fff;}
+.register form{padding:50px 10px;border:1px solid #ccc;}
+
+.post{width:800px;margin:0 auto;}

@@ -1,0 +1,19 @@
+<%- include q_header.html %>
+  <!-- 下部 -->
+    <div class="container clearfix">
+      <div class="commentList">
+        <div id="submitcomment">
+          <form action="addcomment" method="post" >
+            <div class="form-in">
+              <label for="cmt-title">问题名称</label>
+              <input type="text" name="cmt-title" placeholder="请输入问题标题并以'？'结束">
+            </div> 
+            <p class="ueditor-label">问题描述</p>
+            <script id="editor" type="text/plain" style="width:100%;height:200px;"></script>
+            <%- include q_addtag.html %>    
+            <button class="submit-btn button">提交</button>
+          </form>      
+        </div>
+      </div>
+      <%- include tagcloud.html %>
+      <%- include q_footer.html %>

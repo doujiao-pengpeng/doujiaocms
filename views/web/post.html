@@ -1,0 +1,18 @@
+<%- include header.html %>
+  <div class="post">
+    <form action="/post" method="post">
+      标题：<br />
+      <input type="text" name="title" /><br />
+      <input type="text" name="title" /><br />
+      正文：<br />
+      <textarea name="post" rows="20" cols="100"></textarea><br />
+      <input type="submit" value="发表" />
+    </form>
+    <form action="/singleUpload" method="post" enctype="multipart/form-data">
+      文件：<br />
+      <input type="file" name="singlefile" /><br />
+      <input type="submit" value="上传" />
+    </form>
+
+  </div>
+<%- include footer.html %>

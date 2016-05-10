@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <title>完整demo</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <link rel="stylesheet" href="comment/css/style.css">
+      <link rel="stylesheet" href="comment/css/index.css">
+      <link href="ueditor/themes/default/css/ueditor.min.css" type="text/css" rel="stylesheet">
+      <script src="ueditor/third-party/jquery-1.10.2.min.js"></script>
+      <script src="comment/js/addcomment.js"></script>
+      <script src="ueditor/ueditor.config.js"></script>
+      <script src="ueditor/ueditor.all.min.js"></script>
+  </head>
+  <body>
+  <div class="wrapper">
+  <header>
+    <img src="comment/images/logo.png" alt="河南理工大学就业指导网">
+  </header>
+  <!-- 导航 -->
+  <nav>
+    <ul class="clearfix main_nav">
+      <li><a href="http://job.hpu.edu.cn/">首页</a></li>
+      <li><a href="/commentList">问题列表</a></li>
+      <li><a href="/addcomment">咨询问题</a></li>
+  </ul>
+  </nav>
+    <!-- 下部 -->
+    <div class="container clearfix q_detail" >
+      <div class="commentList">
+        <section class="cmt_list_item">
+          <div class="qa-rank">
+            <div class="q_q_img">
+              <img src="comment/images/question.jpg" alt="">
+            </div>
+          </div>
+          <div class="summary">
+            <h3 id="<%= Comment._id %>" class="cmt-title"><%= Comment.cmtTitle %></h3>
+            <div class="cmt-cnt"><%- Comment.cmtContent %></div>
+            <div class="cmt-tag">
+              <div class="col-6 tag">
+                <% for(var j=0; j<Comment.cmtTag.length; j++)  {%>
+                  <a href="#"><%= Comment.cmtTag[j] %></a>
+                <% } %>
+              </div>
+              <em class="cmt-date"><%= Comment.date %></em>
+            </div>
+          </div>
+        </section>
+        <div class="answer-box">
+          <% for(var i=0; i<Comment.cmtAnswer.length; i++) {%>
+          <section class="cmt_list_item answer">
+            <div class="qa-rank">
+              <div class="q_q_img">
+                <img src="comment/images/answer.jpg" alt="">
+              </div>
+            </div>
+            <div class="summary">
+              <div class="cmt-cnt"><%- Comment.cmtAnswer[i].answer %></div>
+              <div class="cmt-tag">
+                <em class="cmt-date"><%= Comment.cmtAnswer[i].date %></em>
+              </div>
+            </div>
+          </section>
+          <% } %>
+        </div>
+        
+        <form id="" action="" class="login">
+          <div class="answer-input">
+            <script id="editor" type="text/plain" style="width:100%;height:140px;"></script>
+          </div>
+          <div class="clearfix">
+            <button class="button fright addAnswer">回复</button>
+          </div>
+        </form>
+      </div>
+      <%- include tagcloud.html %>
+      <%- include q_footer.html %>

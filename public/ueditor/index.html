@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>完整demo</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link href="themes/default/css/ueditor.min.css" type="text/css" rel="stylesheet">
+    <script src="third-party/jquery-1.10.2.min.js"></script>
+    <script src="ueditor.config.js"></script>
+    <script src="ueditor.all.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>完整demo</h1>
+        <script id="editor" type="text/plain" style="width:400px;height:240px;"></script>
+    </div>
+</body>
+<script>
+    var ue=UE.getEditor('editor',{
+        toolbars: [
+            ['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist',  ]
+        ],
+        autoHeightEnabled: true,
+        autoFloatEnabled: true
+    });
+    //var lang = ue.getOpt('toolbars'); //默认返回：zh-cn
+    //console.log(lang);
+</script>
+</html>
